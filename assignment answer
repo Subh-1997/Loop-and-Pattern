@@ -1,0 +1,192 @@
+1. Print N stars
+   Given an integer N, print N stars in a single line.
+
+   import java.io.*;
+   import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       int n = sc.nextInt();
+           for(int i=0;i<n;i++){
+               System.out.print("*");
+           }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2.Print a matrix of stars
+
+Given two integers N and M as inputs, print a rectangle of N * M stars.
+
+import java.io.*;
+import java.util.*;
+***
+***
+public class Solution {
+
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+        
+         for(int i=1;i<=n;i++){
+            for(int j=1;j<=m;j++){
+               System.out.print("*");
+           }  
+             System.out.println();
+           }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3.Stair Pattern 1
+
+Take an integer N as input, print the corresponding stair pattern for N.
+*
+* *
+* * *
+* * * *
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+           int n = sc.nextInt();
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4.Skip Even Numbers Half Pyramid
+
+Take an integer N as input, print the corresponding pattern for N.
+import java.io.*;
+import java.util.*;
+1
+1 
+1 3
+1 3 
+1 3 5
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+           int n = sc.nextInt();
+                for(int i=1;i<=n;i++){
+            for(int j=1;j<=i;j++){
+                if(j%2!=0){
+                  System.out.print(j+" ");  
+                }   
+            }
+            System.out.println();
+        }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5.Two Line Star Pattern
+
+Print a pattern consisting of N rows, where each row contains an asterisk (*) at the beginning and end of the line, with N-2 spaces in between.
+The Pattern should look like:
+Print the above pattern for a total of N Rows.
+Refer Example ouput, for better clarification.
+*  *
+*  *
+*  *
+*  *
+Explanation 0
+
+Here N = 4, So each row should have N - 2 spaces which is 2. Thus the N rows(i.e, 4 rows) should be in the form (asterisk)(2 spaces)(asterisk)
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+         for(int i=1;i<=n;i++){
+             System.out.print("*");
+            for(int j=1;j<=n-2;j++){
+               System.out.print(" ");
+           }  
+              System.out.print("*");
+             System.out.println();
+           }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5.Leading spaces pyramid
+
+Take an integer N as input, print the corresponding pattern for N.
+ *
+**
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+           int n = sc.nextInt();
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=n-i;j++){
+                 System.out.print(" ");
+            }
+           
+            for(int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+6.From top to down
+Write a program to print all Natural numbers from 1 to N where you have to take N as input from user
+Sample Output 1 2 3
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+           int n = sc.nextInt();
+        for(int i=1;i<=n;i++){
+             System.out.print(i+" ");
+        }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+7.Odd Game 1
+Write a program to print all odd numbers from 1 to N where you have to take N as input from user. Here N is inclusive.
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+             Scanner sc = new Scanner(System.in);
+           int n = sc.nextInt();
+        for(int i=1;i<=n;i++){
+            if(i%2!=0){
+                System.out.print(i+" ");
+            }
+        }
+        
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
