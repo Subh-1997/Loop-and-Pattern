@@ -190,3 +190,151 @@ public class Solution {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
     }
 }
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+8.Summation Game
+Write a program to find sum all Natural numbers from 1 to N where you have to take N as input from user
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int sum = 0;
+        for(int i=1;i<=n;i++){
+            sum+=i;
+        }
+         System.out.println(sum);
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+9.From down to top
+Write a program to print all Natural numbers from N to 1 where you have to take N as input from user
+5 4 3 2 1
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        for(int i=n;i>0;i--){
+            System.out.print(i+" ");
+        }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+10.Multiplication Table 52
+Write a program to print the multiplication table of the number entered by the user, N.
+The table for input N = 5 should get displayed in the following form:
+5 * 1 = 5
+5 * 2 = 10
+5 * 3 = 15
+5 * 4 = 20
+5 * 5 = 25
+5 * 6 = 30
+5 * 7 = 35
+5 * 8 = 40
+5 * 9 = 45
+5 * 10 = 50
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        
+        for(int i=1;i<=10;i++){
+           int ans=n*i;
+            System.out.println(n+" * "+i+" = "+ans);
+        }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+11.Easy Power
+You are given two integers A and B. You have to find the value of A^B.
+NOTE: The value of A^B will always be less than or equal to 10^9.\
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int A = sc.nextInt();
+        int B = sc.nextInt();
+        int ans=1;
+        while(B!=0){
+            ans*=A;
+            B--;
+        }   
+         System.out.println(ans);
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+12.Count factor
+Take an integer N as input and print the count of its factors. The factor of a number is the number that divides it perfectly leaving no remainder.
+
+Example: 1, 2, 3, and 6 are factors of 6
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int A = sc.nextInt();
+        int count=0;
+        for(int i=1;i<=A;i++){
+            if(A%i==0){
+                count++;
+            }
+        }
+        System.out.print(count);
+        
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+13.is it Prime? 2
+Take an integer A as input, you have to tell whether it is a prime number or not.
+A prime number is a natural number greater than 1 which is divisible only by 1 and itself.
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int A = sc.nextInt();
+        int count=0;
+        for(int i=1;i<=A;i++){
+            if(A%i==0){
+                count++;
+            }
+        }
+        if(count==2){
+            System.out.print("YES ");
+        }else{
+            System.out.print("NO");
+        }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+14.Is It Perfect? 1
+Given the Number of Test Cases as T, For each test case, take an integer N as input, you have to tell whether it is a perfect number or not.
+A perfect number is a positive integer that is equal to the sum of its proper positive divisors (excluding the number itself). A positive proper divisor divides a number without leaving any remainder
+
