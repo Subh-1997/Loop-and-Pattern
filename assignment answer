@@ -384,3 +384,244 @@ public class Solution {
     }
 }
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+15.Count the digits 2
+Take T (number of test cases) as input. For each test case, take integer N as input and Print the count of digits of that number.
+Sample Input 
+2
+100
+10101
+
+Sample Output 
+3
+5
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static int countDigit(int B){
+      
+        int temp = B;
+        int count =0;
+        if(temp==0) {
+                return 1;
+            }
+        
+        while(temp!=0){
+            temp=temp/10;
+            count++;        
+        }
+        return count;
+       
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int A = sc.nextInt();
+        int B;
+         for(int i=1;i<=A;i++){
+            B=sc.nextInt();
+            System.out.println(countDigit(B));
+         }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+16.Reverse integer 16
+You are given an integer N and the task is to reverse the digits of the given integer. Return 0 if the result overflows and does not fit in a 32 bit signed integer
+input:123
+output:321
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int A = sc.nextInt();
+        int rev=0;
+        while(A!=0){
+            int digit = A%10;
+            A/=10;
+            if(rev>Integer.MAX_VALUE/10 || (rev==Integer.MAX_VALUE/10 && digit>Integer.MAX_VALUE%10)){
+                System.out.println(0);
+            }
+            if(rev<Integer.MIN_VALUE/10 || (rev==Integer.MIN_VALUE/10 && digit<Integer.MIN_VALUE%10)){
+                System.out.println(0);
+            }
+            rev= rev*10+digit;
+        }
+        System.out.println(rev);
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+17.Armstrong Numbers!
+You are given an integer N you need to print all the Armstrong Numbers between 1 to N. (N inclusive).
+
+If sum of cubes of each digit of the number is equal to the number itself, then the number is called an Armstrong number.
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void findArmStrong(int i){
+        int arm=0,rem;
+        int c=i;
+        
+        while(i>0){
+            rem=i%10;
+            arm=(rem*rem*rem)+arm;
+            i=i/10;
+        }
+        if(c==arm){
+            System.out.println(c);
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+         int A = sc.nextInt();
+        for(int i=1;i<=A;i++){
+            findArmStrong(i);
+        }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+18.Print the Primes!
+You are given an integer N you need to print all the Prime Numbers between 1 and N.
+Prime numbers are numbers that have only 2 factors: 1 and themselves. For example, the first 5 prime numbers are 2, 3, 5, 7, and 11.
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+         Scanner sc = new Scanner(System.in);
+         int A = sc.nextInt();
+         
+        for(int i=2;i<=A;i++){
+            int count=0;
+            for(int j=1;j<=i;j++){
+                if(i%j==0){
+                    count++;
+                }
+                
+            }
+           if(count==2){
+                    System.out.println(i);
+                }           
+        }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+19.LCM - Easy
+Implement a program that takes two positive integers A and B in the input and prints their LCM.
+Definition of LCM : The Least Common Multiple or LCM of two numbers say A and B, is denoted as LCM (A,B). And the LCM is the smallest or least positive integer that is divisible by both A and B.
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+         int A = sc.nextInt();
+         int B = sc.nextInt();
+         int A2=A;
+         int B2=B;
+        while(A%B!=0){
+            int rem = A%B;
+            A=B;
+            B=rem;
+        }
+        int gcd = B;
+        int LCM = A2*B2/gcd;
+        System.out.println(LCM);
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+20.Palindromic Integer 2
+You are given an integer A as input and you need to determine whether it is a palindrome or not. A palindrome integer is one whose digits, when reversed, result in the same number. For example, 121 is a palindrome because its reverse is also 121, but 123 is not a palindrome because its reverse is 321.
+Note: The given integer will not have any leading zeros.
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+         int A = sc.nextInt();
+         int c=A;
+         int rev=0;
+        while(A>0){
+            int digit = A%10;
+            A=A/10;
+            rev = rev*10+digit;
+        }
+        if(rev==c){
+             System.out.println("Yes");
+        }else{
+             System.out.println("No");
+        }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+21.Inverted Half Pyramid 1
+Given an integer N, print the corresponding Inverted Half Pyramid pattern for N.
+*****
+****
+***
+**
+*
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+         int A = sc.nextInt();
+        for(int row=1;row<=A;row++){
+            for(int col=1;col<=A-row+1;col++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+22.Leading spaces inverted pyramid
+Take an integer N as input, print the corresponding pattern for N. please see the sample test case to get clear undestanding of test case
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+         int A = sc.nextInt();
+        int sp=0;
+        int st=A;
+        for(int i=1;i<=A;i++){
+            for(int j=1;j<=sp;j++){
+                System.out.print(" ");
+            }
+            for(int j=1;j<=st;j++){
+                System.out.print("*");
+            }
+            sp++;
+            st--;
+            System.out.println();
+        }
+        
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
